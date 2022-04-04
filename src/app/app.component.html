@@ -7,13 +7,13 @@
     <div>
       <ul>
         <li>
-          <a [routerLink]="['home']" style="color: yellow">Home</a>
+          <a [routerLink]="['home']">Home</a><br>
         </li>
         <li>
-          <a>Clientes</a>
+          <a [routerLink]="['clientes']">Clientes</a><br>
         </li>
         <li>
-          <a>Cerrar Sesion</a>
+          <a [routerLink]="['login']">Cerrar Sesion</a><br>
         </li>
       </ul>
     </div>
@@ -23,4 +23,8 @@
   </div><br>
     
   <router-outlet></router-outlet>
+  
 </mat-drawer-container>
+<footer class="footerStyle">
+  <p>&copy; Heavy Machine S.R.L 2022. all right reserved</p>
+</footer>
