@@ -1,0 +1,32 @@
+.sideT{
+    background-color: black;
+    color: aqua;
+    height: 100vh;
+    width: 150px;
+    position: fixed;
+}
+
+.logo{
+    color: whitesmoke;
+    font-size: medium;
+}
+.logo-left{
+    background-color: orange;
+    border-radius: 4px;
+    padding: 3px 5px 3px 5px;
+}
+.logo-right{
+    border-radius: 4px;
+    background-color: gray;
+    margin-left: -5px;
+    padding: 3px 5px 3px 3px;
+
+}
+.divext{
+    text-align: center;
+    padding-top: 15px;
+}
+.drawerext{
+    height: 100%;
+    background-image: url(../app/imagenes/pexels-kevin-bidwell-2348359.jpg);
+}
