@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiClienteService } from '../servicios/apiClienteService';
 
 @Component({
   selector: 'app-clientes',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientesComponent implements OnInit {
 
-  constructor() { }
+  public lst: any;
+
+  public columnas: string[] = ['id', 'nombre', 'telefono'];
+
+  constructor(private apiCliente: ApiClienteService) { }
 
   ngOnInit(): void {
+    this.publicarClientes();
   }
 
+  publicarClientes(){
+    this.apiCliente.ObtenerClientes().subscribe(def => {
+      this.lst = def.data;
+      console.log(def);
+    })
+  }
 }

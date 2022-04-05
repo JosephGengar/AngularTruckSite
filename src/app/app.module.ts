@@ -12,6 +12,9 @@ import { LoginComponent } from './login/login.component';
 import { MatCardModule } from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import { HttpClientModule } from '@angular/common/http';
+import { MatTableModule } from '@angular/material/table';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +30,9 @@ import { MatInputModule } from '@angular/material/input';
     MatButtonModule,
     MatCardModule,
     FormsModule,
-    MatInputModule
+    MatInputModule,
+    HttpClientModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
