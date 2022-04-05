@@ -12,7 +12,11 @@ export class LoginComponent implements OnInit {
   public password: string = "";
 
   constructor(private apiUsuario: ApiUsuarioService,
-              public route: Router) { }
+              public route: Router) { 
+                if(this.apiUsuario.usuarioData){
+                  this.route.navigate(["/"]);
+                }
+              }
 
   ngOnInit(): void {
   }
@@ -21,10 +25,7 @@ export class LoginComponent implements OnInit {
     this.apiUsuario.Login(this.usuario, this.password).subscribe(res => {
       if(res.exito == 1){
         this.route.navigate(["/"]);
-      }
-      else{
-        alert("Error al intentar el inicio de sesion");
-      }
+      }     
     })
 
   }

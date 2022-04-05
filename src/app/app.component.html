@@ -13,7 +13,7 @@
           <a [routerLink]="['clientes']">Clientes</a><br>
         </li>
         <li>
-          <a [routerLink]="['login']">Cerrar Sesion</a><br>
+          <a [routerLink]="['login']" *ngIf="usuarioapp" (click)="logOutApp()" >Cerrar Sesion</a><br>
         </li>
       </ul>
     </div>
