@@ -3,16 +3,16 @@
     <mat-card-content>
         <p>
             <mat-form-field>
-                <input type="text" matInput placeholder="Email">
+                <input type="text" [(ngModel)] = "usuario" matInput placeholder="Legajo">
             </mat-form-field>
         </p>
         <p>
             <mat-form-field>
-                <input type="password" matInput placeholder="Password">
+                <input type="password" [(ngModel)] = "password" matInput placeholder="Password">
             </mat-form-field>
         </p><br>
         <div>
-            <button mat-raised-button color="primary">Iniciar</button>
+            <button mat-raised-button color="primary" (click)="logueo()">Iniciar</button>
         </div>
     </mat-card-content>
 </mat-card>
