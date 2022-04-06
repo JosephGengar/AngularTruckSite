@@ -10,7 +10,7 @@ export class ClientesComponent implements OnInit {
 
   public lst: any;
 
-  public columnas: string[] = ['id', 'nombre', 'telefono'];
+  public columnas: string[] = ['id', 'nombre', 'telefono', 'acciones'];
 
   constructor(private apiCliente: ApiClienteService) { }
 
