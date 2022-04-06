@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { ApiClienteService } from '../servicios/apiClienteService';
+import { DialogCComponent } from './dialog/dialogC.component';
 
 @Component({
   selector: 'app-clientes',
@@ -12,7 +14,8 @@ export class ClientesComponent implements OnInit {
 
   public columnas: string[] = ['id', 'nombre', 'telefono', 'acciones'];
 
-  constructor(private apiCliente: ApiClienteService) { }
+  constructor(private apiCliente: ApiClienteService,
+              private dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.publicarClientes();
@@ -23,5 +26,13 @@ export class ClientesComponent implements OnInit {
       this.lst = def.data;
       console.log(def);
     })
+  }
+  OpenDialogClientes(){
+    const dialogRef = this.dialog.open(DialogCComponent, {
+      width: '300px',
+    });
+    dialogRef.afterClosed().subscribe(res => {
+      this.publicarClientes();
+    });
   }
 }

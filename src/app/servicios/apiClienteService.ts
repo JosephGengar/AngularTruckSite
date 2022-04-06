@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
+import { Cliente } from "../Models/Cliente";
 import { respuesta } from "../Models/Respuesta";
 
 const httpOptions = {
@@ -21,6 +22,9 @@ export class ApiClienteService{
     }
     ObtenerClientes(): Observable<respuesta>{
         return this.http.get<respuesta>(this.url);
+    }
+    AgregarClientes(cliente: Cliente):Observable<respuesta>{
+        return this.http.post<respuesta>(this.url, cliente, httpOptions)
     }
 
 }

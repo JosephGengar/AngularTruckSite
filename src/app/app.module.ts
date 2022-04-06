@@ -14,6 +14,10 @@ import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { HttpClientModule } from '@angular/common/http';
 import { MatTableModule } from '@angular/material/table';
+import {MatDialogModule} from '@angular/material/dialog';
+import { ReactiveFormsModule } from '@angular/forms';
+import { DialogCComponent } from './clientes/dialog/dialogC.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -21,6 +25,7 @@ import { MatTableModule } from '@angular/material/table';
     HomeComponent,
     ClientesComponent,
     LoginComponent,
+    DialogCComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +37,10 @@ import { MatTableModule } from '@angular/material/table';
     FormsModule,
     MatInputModule,
     HttpClientModule,
-    MatTableModule
+    MatTableModule,
+    MatDialogModule,
+    ReactiveFormsModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
