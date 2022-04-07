@@ -18,6 +18,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DialogCComponent } from './clientes/dialog/dialogC.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { DialogDeleteComponent } from './clientes/dialogDelete/dialogDelete.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     HomeComponent,
     ClientesComponent,
     LoginComponent,
-    DialogCComponent
+    DialogCComponent,
+    DialogDeleteComponent
   ],
   imports: [
     BrowserModule,

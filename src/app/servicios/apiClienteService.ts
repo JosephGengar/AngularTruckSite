@@ -29,5 +29,8 @@ export class ApiClienteService{
     EditarClientes(cliente: Cliente):Observable<respuesta>{
         return this.http.put<respuesta>(this.url, cliente, httpOptions)
     }
+    BorrarClientes(id: number):Observable<respuesta>{
+        return this.http.delete<respuesta>(`${this.url}/${id}`, httpOptions)
+    }
 
 }

@@ -17,7 +17,7 @@
             <th mat-header-cell *matHeaderCellDef>Acciones</th>
             <td mat-cell *matCellDef="let element">
                 <button mat-raised-button color="default" (click)="OpenDialogModificar(element)">Modificar</button>
-                <button mat-raised-button color="warn" style="margin-left: 8px;">Eliminar</button>
+                <button mat-raised-button color="warn" style="margin-left: 8px;" (click)="OpenDialogBorrar(element)">Eliminar</button>
             </td>
         </ng-container>
         <tr mat-header-row *matHeaderRowDef="columnas"></tr>
