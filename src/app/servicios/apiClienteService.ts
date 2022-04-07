@@ -26,5 +26,8 @@ export class ApiClienteService{
     AgregarClientes(cliente: Cliente):Observable<respuesta>{
         return this.http.post<respuesta>(this.url, cliente, httpOptions)
     }
+    EditarClientes(cliente: Cliente):Observable<respuesta>{
+        return this.http.put<respuesta>(this.url, cliente, httpOptions)
+    }
 
 }

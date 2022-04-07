@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Cliente } from '../Models/Cliente';
 import { ApiClienteService } from '../servicios/apiClienteService';
 import { DialogCComponent } from './dialog/dialogC.component';
 
@@ -34,5 +35,14 @@ export class ClientesComponent implements OnInit {
     dialogRef.afterClosed().subscribe(res => {
       this.publicarClientes();
     });
+  }
+  OpenDialogModificar(cliente: Cliente){
+    const dialogRef = this.dialog.open(DialogCComponent, {
+      width: '300px',
+      data: cliente,
+    });
+    dialogRef.afterClosed().subscribe(res => {
+      this.publicarClientes();
+    })
   }
 }
